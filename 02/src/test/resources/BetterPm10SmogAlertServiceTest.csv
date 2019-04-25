@@ -1,0 +1,10 @@
+pm10,  country,    expectedSmogAlertLevel
+12,     HUNGARY,    OK
+80,    HUNGARY,    INFO
+101,   HUNGARY,    WARNING
+10,     ITALY,      OK
+51,    ITALY,      INFO
+77,    ITALY,      WARNING
+12,     POLAND,     OK
+102,   POLAND,     INFO
+400,   POLAND,     WARNING
