@@ -1,18 +1,16 @@
-# 02 All shades of smog
+# 02 Fifty shades of smog
 
 ![src//test//resources//images//smog_map.jpg](src//test//resources//images//smog_map.jpg)
 
 Read this article as reference [https://www.polskialarmsmogowy.pl/polski-alarm-smogowy/smog/szczegoly,poziomy-informowania-i-alarmowe,19.html](https://www.polskialarmsmogowy.pl/polski-alarm-smogowy/smog/szczegoly,poziomy-informowania-i-alarmowe,19.html)
 
 ## Code
-
-[Pm10SmogAlertService.java](src//main//java//io//github//javafaktura//s01e05//Pm10SmogAlertService.java) - our smog service responsible for defining whenever given smog alert type should be send for given params
-[Country.java](src//main//java//io//github//javafaktura//s01e05//Country.java) - simple enum storing all countries supported by service
-[SmogAlertType.java](src//main//java//io//github//javafaktura//s01e05//Country.java) - simple enum storing all countries supported by service
+* [Pm10SmogAlertService.java](src//main//java//io//github//javafaktura//s01e05//Pm10SmogAlertService.java) - our smog service responsible for defining whenever given smog alert type should be send for given params
+* [Country.java](src//main//java//io//github//javafaktura//s01e05//Country.java) - simple enum storing all countries supported by service
+* [SmogAlertType.java](src//main//java//io//github//javafaktura//s01e05//Country.java) - simple enum storing all countries supported by service
 
 ## Bad Tests
-
-[BadPm10SmogAlertServiceTest.java](src//test//java//io//github//javafaktura//s01e05//BadPm10SmogAlertServiceTest.java) - multiple tests to cover all corner cases of service
+* [BadPm10SmogAlertServiceTest.java](src//test//java//io//github//javafaktura//s01e05//BadPm10SmogAlertServiceTest.java) - multiple tests to cover all corner cases of service
 
 ### Nice parts and lessons learned included:
 * :+1: better test naming, both method naming and descriptive one
@@ -33,7 +31,7 @@ Read this article as reference [https://www.polskialarmsmogowy.pl/polski-alarm-s
 
 ## Better Tests
 
-[BetterPm10SmogAlertServiceTest.java](src//test//java//io//github//javafaktura//s01e05//BetterPm10SmogAlertServiceTest.java) -
+[BetterPm10SmogAlertServiceTest.java](src//test//java//io//github//javafaktura//s01e05//BetterPm10SmogAlertServiceTest.java) - the same tests but grouped by param approach
 
 ### Good practices (sometimes opinionated):
 * :+1: right way to do parameterized test without for loop
