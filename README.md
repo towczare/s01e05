@@ -1,5 +1,5 @@
 ﻿# Javafaktura s01e05 - Unit testing
-
+    ![.images/javafaktura.png](.images/javafaktura.png)
 01. [Hello tests](01/README.md)
     ![.images/01.jpg](.images/01.jpg)
 02. [Fifty shades of smog](02/README.md)
