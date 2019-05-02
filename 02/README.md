@@ -39,6 +39,7 @@ Read this article as reference [https://www.polskialarmsmogowy.pl/polski-alarm-s
 * :+1: splitting single test to multiple ones allows us to get one single scenario when test fails
 * :+1: it is way easier to spot reason why a certain test failed
 * :+1: additional ability to import data params from external source
+* :+1: convention names for easier connection between csv data and test
 
 ## Fixing bugs and tests
 

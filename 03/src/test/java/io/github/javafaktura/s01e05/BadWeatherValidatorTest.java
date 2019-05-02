@@ -6,18 +6,21 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class WeatherValidatorTest {
+public class BadWeatherValidatorTest {
 
     WeatherValidator validator = new WeatherValidator();
 
     @Test
     @DisplayName("When null object is passed to WeatherValidator validate method IllegalArgumentException should be thrown")
     void nullWeatherObjectShouldThrowIllegalArgumentException() {
+        //assume
         Weather weather = null;
 
         try {
+            //when
             validator.validate(weather);
         } catch (IllegalArgumentException e) {
+            //then
             Assertions.assertEquals(IllegalArgumentException.class, e.getClass());
         }
     }
@@ -28,18 +31,21 @@ public class WeatherValidatorTest {
             " 100.01,    0.00,     0.00",
             "   0.00,  500.01,     0.00",
             "   0.00,   -0.01,     0.00",
-            "   0.00,    0.00, 10000.00",
+            "   0.00,    0.00, 10000.00", // ops, this is actually perfectly fine, why does it pass?
             "   0.00,    0.00,    -0.01"
     })
     void whenGivenWeatherAttributeIsDefinedFollowingExceptionShouldBeThrown(
             double temp, double wind, double rainfall
     ) {
+        //assume
         Weather weather = new Weather(temp, wind, rainfall);
-        RuntimeException exception = null;
+
         try {
+            //when
             validator.validate(weather);
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(IllegalArgumentException.class, exception.getClass());
+            //then
+            Assertions.assertEquals(IllegalArgumentException.class, e.getClass());
         }
     }
 

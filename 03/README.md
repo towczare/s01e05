@@ -8,19 +8,23 @@
 
 ## Bad Tests
 
-[](src//test//java//io//github//javafaktura//s01e05//WeatherValidatorTest.java) - checking multiple scenarios, when our service should throw given exception.
+[WeatherValidatorTest](src//test//java//io//github//javafaktura//s01e05//WeatherValidatorTest.java) - checking multiple scenarios, when our service should throw given exception.
 
 ### Nice parts and lessons learned included:
 * :+1: DDT - Data Driven Test done right using parametrized tests
 * :+1: Good descriptive names for both methods and test scenarios
+* :+1: Not introducing too many new custom exception types
 
 Smells (sometimes opinionated):
 * :hankey: Testing only happy path scenarios
-... tbc
-
+* :hankey: As consequence of above always green test bugs
+* :hankey: No distinction between error types
 
 ## Better Tests
 
-[](src//test//java//io//github//javafaktura//s01e05//.java) -
+[BetterWeatherValidatorTest](src//test//java//io//github//javafaktura//s01e05//BetterWeatherValidatorTest.java) -
 Good practices (sometimes opinionated):
-* :+1:
+* :+1: Using right API provided by JUnit5 to test exception throws
+* :+1: Beside happy path (happy path with exceptions :laughing:), adding also reverse tests
+* :+1: Testing different scenarios by asserting exception messages
+
