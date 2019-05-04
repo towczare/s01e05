@@ -13,14 +13,14 @@ public class BadWeatherValidatorTest {
     @Test
     @DisplayName("When null object is passed to WeatherValidator validate method IllegalArgumentException should be thrown")
     void nullWeatherObjectShouldThrowIllegalArgumentException() {
-        //assume
+        /** given **/
         Weather weather = null;
 
         try {
-            //when
+            /** when **/
             validator.validate(weather);
         } catch (IllegalArgumentException e) {
-            //then
+            /** then **/
             Assertions.assertEquals(IllegalArgumentException.class, e.getClass());
         }
     }
@@ -37,14 +37,14 @@ public class BadWeatherValidatorTest {
     void whenGivenWeatherAttributeIsDefinedFollowingExceptionShouldBeThrown(
             double temp, double wind, double rainfall
     ) {
-        //assume
+        /** given **/
         Weather weather = new Weather(temp, wind, rainfall);
 
         try {
-            //when
+            /** when **/
             validator.validate(weather);
         } catch (IllegalArgumentException e) {
-            //then
+            /** then **/
             Assertions.assertEquals(IllegalArgumentException.class, e.getClass());
         }
     }

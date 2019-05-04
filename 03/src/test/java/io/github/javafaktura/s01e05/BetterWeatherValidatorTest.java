@@ -40,15 +40,15 @@ public class BetterWeatherValidatorTest {
     void whenGivenWeatherAttributeIsDefinedFollowingExceptionShouldBeThrown(
             double temp, double wind, double rainfall, String expectedErrorMsg
     ) {
-        //assume
+        /** given **/
         Weather weather = new Weather(temp, wind, rainfall);
 
-        //expect
+        /** expect **/
         IllegalArgumentException exception = Assertions.assertThrows(
                 IllegalArgumentException.class,
                 () -> validator.validate(weather)
         );
-        //and expect
+        /** and expect **/
         Assertions.assertEquals(expectedErrorMsg, exception.getMessage());
     }
 
@@ -62,10 +62,10 @@ public class BetterWeatherValidatorTest {
     void whenGivenWeatherAttributeIsDefinedNoExceptionShouldBeThrown(
             double temp, double wind, double rainfall
     ) {
-        //assume
+        /** given **/
         Weather weather = new Weather(temp, wind, rainfall);
 
-        //expect
+        /** expect **/
         Assertions.assertDoesNotThrow(
                 () -> validator.validate(weather)
         );

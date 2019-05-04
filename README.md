@@ -2,6 +2,30 @@
 
 ![.images/javafaktura.png](.images/javafaktura.png)
 
+## How to read this repository?
+
+Whole repository is divided into couple modules covering various examples and testing techniques.
+Each module contains its own `README.md` file which dives into details particular example. In details contains following:
+* Introduction - covers basic information about domain
+* Code - what are main code classes we are testing and what they actually do
+* Bad Tests - testing code which is not written in most efficient way. Main purpose is to present most common mistakes
+    * :hankey: Smells - comments whats wrong with this particular `Bad*` examples
+* Better Tests - alternative version of testing code, which should be better. It fixes smells and shows good practices (sometimes opinionated)
+    * :+1: Good practices -  comments exactly, whats better and what mistakes has been resolved
+
+#### `Bad` vs `Better` prefix naming convention
+* `Bad*` - classes representing common mistakes and anti-patterns
+* `Better*` - alternative classes showing how above examples could be easily improved
+
+#### Comment types:
+* ```
+    /** All comments storing additional information withing presented example **/
+  ```
+
+* ```
+    // Alternative version of code **/
+  ```
+
 01. [Hello tests](01/README.md) - your first test
 
     ![.images/01.jpg](.images/01.jpg)

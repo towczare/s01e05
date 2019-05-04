@@ -1,5 +1,7 @@
 package io.github.javafaktura.s01e05;
 
+import java.time.Instant;
+
 interface WeatherRepository {
-    String save(Weather weather);
+    Instant save(Weather weather);
 }

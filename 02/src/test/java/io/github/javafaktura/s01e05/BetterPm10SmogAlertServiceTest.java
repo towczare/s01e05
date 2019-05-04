@@ -29,10 +29,10 @@ class BetterPm10SmogAlertServiceTest {
     void forGivenPm10AndCountryShouldReturnRightSmogAlertType(
             int pm10, Country country, SmogAlertLevel expectedSmogLevel
     ) {
-        //when
+        /** when **/
         SmogAlertLevel result = alertService.rateAirQuality(pm10, country);
 
-        //expected
+        /** expected **/
         assertEquals(expectedSmogLevel, result);
         // Hamcrest matcher alternative
         //assertThat(result, equalTo(expectedSmogLevel));

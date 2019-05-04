@@ -6,7 +6,7 @@ import com.google.common.base.Preconditions;
 public class WeatherValidator {
 
     public void validate(Weather weather) {
-        Preconditions.checkArgument(weather != null,                 "Weather can't be null");
+        Preconditions.checkArgument(weather != null,                  "Weather can't be null");
         Preconditions.checkArgument(weather.getTemp()     >  -100.00, "Temperature can't be lower than -100.00 °C");
         Preconditions.checkArgument(weather.getTemp()     <=  100.00, "Temperature can't be higher than 100.00 °C");
         Preconditions.checkArgument(weather.getWind()     <=  500.00, "Wind can't be higher than 500.00 km/h");

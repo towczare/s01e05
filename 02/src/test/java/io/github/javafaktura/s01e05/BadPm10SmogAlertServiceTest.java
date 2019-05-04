@@ -12,9 +12,9 @@ class BadPm10SmogAlertServiceTest {
     @Test
     @DisplayName("For given Pm10 and country should return right smog alert type")
     void forGivenPm10AndCountryShouldReturnRightSmogAlertType() {
-        //given
+        /** given **/
         Pm10SmogAlertService alertService = new Pm10SmogAlertService();
-        //and
+        /** and **/
         List<TestParams> testScenarios = new ArrayList<>();
         testScenarios.add(new TestParams(  0, Country.HUNGARY,  SmogAlertLevel.OK));
         testScenarios.add(new TestParams( 75, Country.HUNGARY,  SmogAlertLevel.INFO));
@@ -27,7 +27,7 @@ class BadPm10SmogAlertServiceTest {
         testScenarios.add(new TestParams(120, Country.POLAND,   SmogAlertLevel.WARNING));
 
         for (TestParams scenario : testScenarios) {
-            //expected
+            /** expected **/
             Assertions.assertEquals(scenario.expectedAlertLevel, alertService.rateAirQuality(scenario.pm10, scenario.country));
         }
     }

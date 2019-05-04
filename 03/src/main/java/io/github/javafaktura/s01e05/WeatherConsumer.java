@@ -1,5 +1,7 @@
 package io.github.javafaktura.s01e05;
 
+import java.time.Instant;
+
 public class WeatherConsumer {
 
     private final WeatherRepository weatherRepository;
@@ -10,7 +12,7 @@ public class WeatherConsumer {
         this.weatherValidator = weatherValidator;
     }
 
-    public String save(Weather weather) {
+    public Instant save(Weather weather) {
         weatherValidator.validate(weather);
         return weatherRepository.save(weather);
     }
