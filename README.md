@@ -40,4 +40,4 @@ Each module contains its own `README.md` file which dives into details particula
 
 03. [Gone with the wind! (anemic vs domain)](04/README.md) - simple difference between anemic and domain models
 
-    ![.images/04.png](.images/04.png)
+    ![.images/04.jpg](.images/04.jpg)
