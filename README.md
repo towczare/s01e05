@@ -37,3 +37,7 @@ Each module contains its own `README.md` file which dives into details particula
 03. [Only good weather data, (no) exceptions](03/README.md) - testing exceptions
 
     ![.images/03.png](.images/03.png)
+
+03. [Gone with the wind! (anemic vs domain)](04/README.md) - simple difference between anemic and domain models
+
+    ![.images/04.png](.images/04.png)
