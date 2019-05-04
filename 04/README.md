@@ -1,6 +1,6 @@
 # 04 Gone with the wind! (anemic vs domain)
 
-![src//test//resources//images//beaufort.png](src//test//resources//images//beaufort.png)
+![src//main//resources//images//beaufort.png](src//test//resources//images//beaufort.png)
 
 ## Code
 
@@ -30,7 +30,7 @@ Domain classes contains both data and business logic.
 
 # Why domain driven models might be better for testing purposes?
 
-![src//test//resources//images//anemic_vs_ddd.jpg](src//test//resources//images//anemic_vs_ddd.jpg)
+![src//main//resources//images//anemic_vs_ddd.jpg](src//test//resources//images//anemic_vs_ddd.jpg)
 
 * :+1: More modular - smaller classes/methods that are easier to test
 * :+1: POJOs with no dependencies on infrastructure - quickly test in isolation
