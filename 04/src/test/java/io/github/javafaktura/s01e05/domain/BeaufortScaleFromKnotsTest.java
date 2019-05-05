@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-class BeaufortScaleTest {
+class BeaufortScaleFromKnotsTest {
 
     @ParameterizedTest(name = "Given number of knots equal to {0} is following Beaufort scale = {1}")
     @CsvSource( {
@@ -38,6 +38,6 @@ class BeaufortScaleTest {
     void givenNumberOfKnotsIsEqualFollowingBeaufortScale(
             double knots, int expectedScale
     ) {
-        Assertions.assertEquals(expectedScale, BeaufortScale.fromKnots(knots).getScale());
+        Assertions.assertEquals(expectedScale, BeaufortScale.from(Knot.of(knots)).getScale());
     }
 }
