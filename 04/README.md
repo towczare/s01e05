@@ -9,9 +9,14 @@
 Anemic classes contains nothing more than just data.
 All business logic is stored in separate classes `Services`, `Converters`, `Utils` you call it.
 
-[BeaufortScale](src//main//java//io//github//javafaktura//s01e05//anemic//BeaufortScale.java) - anemic class storing only data of [`Beaufort scale`](https://en.wikipedia.org/wiki/Beaufort_scale)
-[KnotsToBeaufortScaleConverter](src//main//java//io//github//javafaktura//s01e05//anemic//KnotsToBeaufortScaleConverter.java) - logic converting knots to Beaufort scale
-[WaveHeightToBeaufortScaleConverter](src//main//java//io//github//javafaktura//s01e05//anemic//WaveHeightToBeaufortScaleConverter.java) - logic converting wave height to Beaufort scale
+* [BeaufortScale](src//main//java//io//github//javafaktura//s01e05//anemic//BeaufortScale.java) - anemic class storing only data of [Beaufort scale](https://en.wikipedia.org/wiki/Beaufort_scale)
+* [KnotsToBeaufortScaleConverter](src//main//java//io//github//javafaktura//s01e05//anemic//KnotsToBeaufortScaleConverter.java) - logic converting [knot units](https://en.wikipedia.org/wiki/Knot_(unit)) to [Beaufort scale](https://en.wikipedia.org/wiki/Beaufort_scale)
+* [WaveHeightToBeaufortScaleConverter](src//main//java//io//github//javafaktura//s01e05//anemic//WaveHeightToBeaufortScaleConverter.java) - logic converting wave height to [Beaufort scale](https://en.wikipedia.org/wiki/Beaufort_scale)
+
+## Tests
+
+* [KnotsToBeaufortScaleConverterTest](src//test//java//io//github//javafaktura//s01e05//anemic//KnotsToBeaufortScaleConverterTest.java) - tests covering [knot units](https://en.wikipedia.org/wiki/Knot_(unit)) converter logic
+* [WaveHeightToBeaufortScaleConverterTest](src//test//java//io//github//javafaktura//s01e05//anemic//WaveHeightToBeaufortScaleConverterTest.java) - tests covering wave converter logic
 
 Smells (sometimes opinionated):
 * :hankey: Testing private methods and exposing too much
@@ -22,10 +27,6 @@ Smells (sometimes opinionated):
 * :hankey: Breaking DRY rule by testing multiple times the same scenarios, first for "private methods" then for public ones
 * :hankey: Too many `if`s instructions in both converters
 
-## Tests
-
-[KnotsToBeaufortScaleConverterTest](src//test//java//io//github//javafaktura//s01e05//anemic//KnotsToBeaufortScaleConverterTest.java) - tests covering knot converter logic
-[WaveHeightToBeaufortScaleConverterTest](src//test//java//io//github//javafaktura//s01e05//anemic//WaveHeightToBeaufortScaleConverterTest.java) - tests covering wave converter logic
 
 ## Domain approach
 
@@ -33,18 +34,18 @@ Smells (sometimes opinionated):
 
 Domain classes contains both data and business logic.
 
-[BeaufortScale](src//main//java//io//github//javafaktura//s01e05//domain//BeaufortScale.java) - domain class with more responsible approach data + logic of [`Beaufort scale`](https://en.wikipedia.org/wiki/Beaufort_scale)
-[Knot](src//main//java//io//github//javafaktura//s01e05//domain//Knot.java) - value object class representing [`knot unit`](https://en.wikipedia.org/wiki/Knot_(unit))
-[Foot](src//main//java//io//github//javafaktura//s01e05//domain//Foot.java) - value object class representing [`foot unit`](https://en.wikipedia.org/wiki/Foot_(unit))
-[Meter](src//main//java//io//github//javafaktura//s01e05//domain//Meter.java) - value object class representing `meter unit`
+* [BeaufortScale](src//main//java//io//github//javafaktura//s01e05//domain//BeaufortScale.java) - domain class with more responsible approach data + logic of [`Beaufort scale`](https://en.wikipedia.org/wiki/Beaufort_scale)
+* [Knot](src//main//java//io//github//javafaktura//s01e05//domain//Knot.java) - value object class representing [knot unit](https://en.wikipedia.org/wiki/Knot_(unit))
+* [Foot](src//main//java//io//github//javafaktura//s01e05//domain//Foot.java) - value object class representing [foot unit](https://en.wikipedia.org/wiki/Foot_(unit))
+* [Meter](src//main//java//io//github//javafaktura//s01e05//domain//Meter.java) - value object class representing meter unit
 
 ### Tests
 
-[BeaufortScaleFromKnotsTest](src//test//java//io//github//javafaktura//s01e05//domain//BeaufortScaleFromKnotsTest.java) - testing conversion from knot units to Beaufort scale
-[BeaufortScaleFromWaveHeightInFootsTest](src//test//java//io//github//javafaktura//s01e05//domain//BeaufortScaleFromWaveHeightInFootsTest.java) - testing conversion from wave height defined in foot units to Beaufort scale
-[BeaufortScaleWaveHeightInMetersTest](src//test//java//io//github//javafaktura//s01e05//domain//BeaufortScaleWaveHeightInMetersTest.java) - testing conversion from wave height defined in meter units to Beaufort scale
-[FootTest](src//test//java//io//github//javafaktura//s01e05//domain//FootTest.java) - testing foot unit class methods
-[MeterTest](src//test//java//io//github//javafaktura//s01e05//domain//MeterTest.java) - testing meter unit class methods
+* [BeaufortScaleFromKnotsTest](src//test//java//io//github//javafaktura//s01e05//domain//BeaufortScaleFromKnotsTest.java) - testing conversion from knot units to Beaufort scale
+* [BeaufortScaleFromWaveHeightInFootsTest](src//test//java//io//github//javafaktura//s01e05//domain//BeaufortScaleFromWaveHeightInFootsTest.java) - testing conversion from wave height defined in foot units to Beaufort scale
+* [BeaufortScaleWaveHeightInMetersTest](src//test//java//io//github//javafaktura//s01e05//domain//BeaufortScaleWaveHeightInMetersTest.java) - testing conversion from wave height defined in meter units to Beaufort scale
+* [FootTest](src//test//java//io//github//javafaktura//s01e05//domain//FootTest.java) - testing foot unit class methods
+* [MeterTest](src//test//java//io//github//javafaktura//s01e05//domain//MeterTest.java) - testing meter unit class methods
 
 Good practices (sometimes opinionated):
 * :+1: Not exposing any private methods
