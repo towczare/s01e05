@@ -20,12 +20,12 @@ public class Foot {
 
     public Meter toMeter() {
         return Meter.of(
-                BigDecimal.valueOf(value)
-                        .multiply(
-                                BigDecimal.valueOf(0.3048)
-                        )
-                        .setScale(2, RoundingMode.HALF_UP)
-                        .doubleValue()
+            BigDecimal.valueOf(value)
+                .multiply(
+                        BigDecimal.valueOf(0.3048)
+                )
+                .setScale(2, RoundingMode.HALF_UP)
+                .doubleValue()
         );
     }
 }

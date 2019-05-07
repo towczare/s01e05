@@ -20,13 +20,13 @@ public class Meter {
 
     public Foot toFoot() {
         return Foot.of(
-                BigDecimal.valueOf(value)
-                .divide(
-                        BigDecimal.valueOf(0.3048),
-                        2,
-                        RoundingMode.HALF_UP
-                )
-                .doubleValue()
+            BigDecimal.valueOf(value)
+            .divide(
+                BigDecimal.valueOf(0.3048),
+                2,
+                RoundingMode.HALF_UP
+            )
+            .doubleValue()
         );
     }
 }
