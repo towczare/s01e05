@@ -1,7 +1,9 @@
-package io.github.javafaktura.s01e05.filter;
+package io.github.javafaktura.s01e05.filter.tdd.step8;
 
 import io.github.javafaktura.s01e05.weather.Weather;
-import io.github.javafaktura.s01e05.weather.filter.*;
+import io.github.javafaktura.s01e05.weather.filter.tdd.step8.RainCriteria;
+import io.github.javafaktura.s01e05.weather.filter.tdd.step8.WeatherCriteria;
+import io.github.javafaktura.s01e05.weather.filter.tdd.step8.WeatherLocationFilter;
 import io.github.javafaktura.s01e05.weather.location.Location;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

@@ -1,4 +1,4 @@
-package io.github.javafaktura.s01e05.weather.filter;
+package io.github.javafaktura.s01e05.weather.filter.tdd.step9;
 
 public class WeatherCriteria {
     private double minTemp;

@@ -1,7 +1,6 @@
-package io.github.javafaktura.s01e05.weather.filter.tdd.step1;
+package io.github.javafaktura.s01e05.weather.filter.tdd.step3;
 
 import io.github.javafaktura.s01e05.weather.Weather;
-import io.github.javafaktura.s01e05.weather.filter.tdd.step1.WeatherCriteria;
 
 import java.util.List;
 

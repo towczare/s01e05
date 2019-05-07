@@ -1,7 +1,8 @@
-package io.github.javafaktura.s01e05.filter;
+package io.github.javafaktura.s01e05.filter.tdd.step7;
 
 import io.github.javafaktura.s01e05.weather.Weather;
-import io.github.javafaktura.s01e05.weather.filter.*;
+import io.github.javafaktura.s01e05.weather.filter.tdd.step7.WeatherCriteria;
+import io.github.javafaktura.s01e05.weather.filter.tdd.step7.WeatherLocationFilter;
 import io.github.javafaktura.s01e05.weather.location.Location;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -73,26 +74,6 @@ public class WeatherLocationFilterTest {
         );
 
         Assertions.assertEquals(expectedFilterResult, filter.filter(minTemp25AndMax30, input));
-    }
-
-    @Test
-    @DisplayName("When dry for rain in criteria is defined then 2 weather predictions should be returned")
-    void whenDryForRainIsDefinedInCriteriaThenFilterShouldReturn2WeatherPredictions() {
-        WeatherCriteria noRain = new WeatherCriteria().ofRain(RainCriteria.DRY);
-        List<Weather> input = List.of(
-                new Weather(LocalDate.now(fixedClock), new Location("Zgierz", "Poland"), 0, 0, 0),
-                new Weather(LocalDate.now(fixedClock).plusDays(1), new Location("Zgierz", "Poland"), 15, 0, 50),
-                new Weather(LocalDate.now(fixedClock).plusDays(2), new Location("Zgierz", "Poland"), 40, 0, 50),
-                new Weather(LocalDate.now(fixedClock), new Location("Pabianice", "Poland"), -10, 10, 20),
-                new Weather(LocalDate.now(fixedClock), new Location("Sieradz", "Poland"), 25, 30, 0)
-        );
-
-        List<Weather> expectedFilterResult = List.of(
-                new Weather(LocalDate.now(fixedClock), new Location("Zgierz", "Poland"), 0, 0, 0),
-                new Weather(LocalDate.now(fixedClock), new Location("Sieradz", "Poland"), 25, 30, 0)
-        );
-
-        Assertions.assertEquals(expectedFilterResult, filter.filter(noRain, input));
     }
 
 }
