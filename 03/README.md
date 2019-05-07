@@ -7,7 +7,7 @@
 
 ## Bad Tests
 
-[WeatherValidatorTest](src//test//java//io//github//javafaktura//s01e05//WeatherValidatorTest.java) - checking multiple scenarios, when our service should throw given exception.
+[BadWeatherValidatorTest](src//test//java//io//github//javafaktura//s01e05//BadWeatherValidatorTest.java) - checking multiple scenarios, when our service should throw given exception.
 
 ### Nice parts and lessons learned included:
 * :+1: DDT - Data Driven Test done right using parametrized tests
