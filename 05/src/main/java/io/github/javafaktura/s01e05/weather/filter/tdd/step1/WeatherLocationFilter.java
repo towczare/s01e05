@@ -8,7 +8,7 @@ import java.util.List;
 public class WeatherLocationFilter {
 
     public List<Weather> filter(WeatherCriteria criteria, List<Weather> source) {
-        return source;
+        return null;
     }
 
 }

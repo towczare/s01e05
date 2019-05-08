@@ -42,6 +42,6 @@ Each module contains its own `README.md` file which dives into details particula
 
     ![.images/04.jpg](.images/04.jpg)
 
-05. [Where to fly my kite?)](05/README.md) - TDD step by step
+05. [Where to fly my kite?](05/README.md) - TDD step by step
 
     ![.images/05.jpg](.images/05.jpg)
