@@ -1,4 +1,4 @@
-package io.github.javafaktura.s01e05.weather.filter;
+package io.github.javafaktura.s01e05.weather.filter.tdd.step11;
 
 import io.github.javafaktura.s01e05.weather.Weather;
 

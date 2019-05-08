@@ -37,4 +37,9 @@ public class Location {
     public String toString() {
         return "City: " + city + " Country: " + country + " ";
     }
+
+    public int compareTo(Location location) {
+        return (location.getCountry() + " " + location.getCity())
+                .compareTo(this.getCountry() + " " + this.getCity());
+    }
 }

@@ -7,8 +7,6 @@ import io.github.javafaktura.s01e05.weather.prediction.WeatherPredictor;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.time.Clock;
 import java.time.Instant;
@@ -55,7 +53,7 @@ class RandomWeatherPredictorTest {
 
     private List<LocalDate> toLocalDates(List<Weather> weathers) {
         return weathers.stream()
-                .map(w -> w.getLocalDate())
+                .map(w -> w.getForecastDate())
                 .collect(Collectors.toList());
     }
 

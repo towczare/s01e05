@@ -1,8 +1,8 @@
-package io.github.javafaktura.s01e05.weather.filter;
+package io.github.javafaktura.s01e05.weather.filter.tdd.step11;
 
 import io.github.javafaktura.s01e05.weather.Weather;
 
-import java.util.*;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class WeatherLocationFilter {
@@ -15,8 +15,12 @@ public class WeatherLocationFilter {
     }
 
     private List<Weather> filterByCriteria(WeatherCriteria criteria, List<Weather> source) {
+
+
         return source.stream()
-            .filter(criteria.toWeatherPredicate())
+            .filter(
+                    criteria.toWeatherPredicate()
+            )
             .collect(Collectors.toList());
     }
 

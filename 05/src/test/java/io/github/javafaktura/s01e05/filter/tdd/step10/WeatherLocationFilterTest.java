@@ -1,13 +1,13 @@
-package io.github.javafaktura.s01e05.filter.tdd.step9;
+package io.github.javafaktura.s01e05.filter.tdd.step10;
 
 import io.github.javafaktura.s01e05.weather.Weather;
-import io.github.javafaktura.s01e05.weather.filter.tdd.step9.RainCriteria;
-import io.github.javafaktura.s01e05.weather.filter.tdd.step9.WeatherCriteria;
-import io.github.javafaktura.s01e05.weather.filter.tdd.step9.WeatherLocationFilter;
+import io.github.javafaktura.s01e05.weather.filter.tdd.step10.*;
 import io.github.javafaktura.s01e05.weather.location.Location;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import java.time.Clock;
 import java.time.Instant;
@@ -18,10 +18,10 @@ import java.util.List;
 public class WeatherLocationFilterTest {
 
     Clock fixedClock =
-        Clock.fixed(
-            Instant.parse("2020-01-01T00:00:00.00Z"),
-            ZoneId.of("Asia/Calcutta")
-        );
+            Clock.fixed(
+                    Instant.parse("2020-01-01T00:00:00.00Z"),
+                    ZoneId.of("Asia/Calcutta")
+            );
 
     WeatherLocationFilter filter = new WeatherLocationFilter();
 
@@ -95,5 +95,34 @@ public class WeatherLocationFilterTest {
         );
 
         Assertions.assertEquals(expectedFilterResult, filter.filter(noRain, input));
+    }
+
+    @ParameterizedTest(name = "For given {0} kite and weather it requires requirements filter should return weather for city {1}")
+    @CsvSource({
+        "DELTA, Katowice",
+        "DIAMOND, Katowice",
+        "DRAGON, Katowice",
+        "BOX, Cieszyn",
+        "STICKLESS_PARAFOIL, Cieszyn",
+    })
+    void forGivenSourceAndKiteTypeWeExpectFollowingWeatherPredictionsFromFilter(
+            KiteType kiteType,
+            String expectedCity
+    ) {
+        WeatherCriteria kiteWeather = kiteType.toWeatherCriteria();
+        List<Weather> input = List.of(
+                new Weather(LocalDate.now(fixedClock).plusDays(1), new Location("Sosnowiec", "Poland"), -10,8.00, 0),
+                new Weather(LocalDate.now(fixedClock).plusDays(2), new Location("Katowice", "Poland"), 30, 9.66, 0),
+                new Weather(LocalDate.now(fixedClock).plusDays(3), new Location("Warszawa", "Poland"), 20, 9.66, 1),
+                new Weather(LocalDate.now(fixedClock).plusDays(2), new Location("Cieszyn", "Poland"), 30, 25.00, 0),
+                new Weather(LocalDate.now(fixedClock).plusDays(2), new Location("Pabianice", "Poland"), 30, 42.00, 1)
+        );
+
+        List<Weather> filtered = this.filter.filter(kiteWeather, input);
+
+        Assertions.assertAll("Only one weather prediction fits our Kite requirements",
+                () -> Assertions.assertTrue(filtered.size() == 1),
+                () -> Assertions.assertEquals(expectedCity, filtered.get(0).getLocation().getCity())
+        );
     }
 }
