@@ -2,8 +2,8 @@
 
 ## Code
 
-[WeatherConsumer](src//main//java//io//github//javafaktura//s01e05//WeatherConsumer.java) - Simplified weather data consumer. Consuming weather containing temperature, wind speed and rainfall data.
-[WeatherValidator](src//main//java//io//github//javafaktura//s01e05//WeatherValidator.java) - Since we don't want to get badly measured data saved, we are throwing multiple exceptions for non consistent data.
+* [WeatherConsumer](src//main//java//io//github//javafaktura//s01e05//WeatherConsumer.java) - Simplified weather data consumer. Consuming weather containing temperature, wind speed and rainfall data.
+* [WeatherValidator](src//main//java//io//github//javafaktura//s01e05//WeatherValidator.java) - Since we don't want to get badly measured data saved, we are throwing multiple exceptions for non consistent data.
 
 ## Bad Tests
 
