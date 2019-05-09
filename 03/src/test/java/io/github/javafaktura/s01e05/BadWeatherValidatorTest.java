@@ -31,7 +31,7 @@ public class BadWeatherValidatorTest {
             " 100.01,    0.00,     0.00",
             "   0.00,  500.01,     0.00",
             "   0.00,   -0.01,     0.00",
-            "   0.00,    0.00, 10000.00", // ops, this is actually perfectly fine, why does it pass?
+            "   0.00,    0.00,  1000.01",
             "   0.00,    0.00,    -0.01"
     })
     void whenGivenWeatherAttributeIsDefinedFollowingExceptionShouldBeThrown(
@@ -40,13 +40,16 @@ public class BadWeatherValidatorTest {
         /** given **/
         Weather weather = new Weather(temp, wind, rainfall);
 
+        IllegalArgumentException thrown = null;
         try {
             /** when **/
             validator.validate(weather);
         } catch (IllegalArgumentException e) {
             /** then **/
-            Assertions.assertEquals(IllegalArgumentException.class, e.getClass());
+            thrown = e;
         }
+//        Assertions.assertEquals(new IllegalArgumentException(), thrown);
+        Assertions.assertNotNull(thrown);
     }
 
 }

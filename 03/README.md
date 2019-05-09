@@ -15,15 +15,16 @@
 * :+1: Not introducing too many new custom exception types
 
 Smells (sometimes opinionated):
-* :hankey: Testing only happy path scenarios
-* :hankey: As consequence of above always green test bugs
+* :hankey: Trying to comparee IllegalArgumentException objects, but all exceptions inherit equals method from Object which means all of them (not custom one) will be different objects
 * :hankey: No distinction between error types
+* :hankey: Ugly to read flow of testing exceptions
+
 
 ## Better Tests
 
 [BetterWeatherValidatorTest](src//test//java//io//github//javafaktura//s01e05//BetterWeatherValidatorTest.java) -
 Good practices (sometimes opinionated):
-* :+1: Using right API provided by JUnit5 to test exception throws
-* :+1: Beside happy path (happy path with exceptions :laughing:), adding also reverse tests
+* :+1: Using right API provided by JUnit5 to test exception throws, more readable
 * :+1: Testing different scenarios by asserting exception messages
+* :+1: Not introducing any new Exception types
 
