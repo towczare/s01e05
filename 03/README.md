@@ -27,4 +27,6 @@ Good practices (sometimes opinionated):
 * :+1: Using right API provided by JUnit5 to test exception throws, more readable
 * :+1: Testing different scenarios by asserting exception messages
 * :+1: Not introducing any new Exception types
+* :+1: Introducing one scenario beside happy path (happy path with exceptions :laughing:)
+
 
