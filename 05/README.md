@@ -55,13 +55,13 @@ Inside `io.github.javafaktura.s01e05.weather.filter.tdd` we defined 11 steps of 
 | [Step 2](src//test//java//io//github//javafaktura//s01e05//filter//tdd//step2//WeatherLocationFilterTest.java)        | :green_book:  | Providing minimal implementation allowing to pass first test |
 | [Step 3](src//test//java//io//github//javafaktura//s01e05//filter//tdd//step3//WeatherLocationFilterTest.java)        | :closed_book: | Second test introduced, we expect to return limited list for minimal temp criteria defined |
 | [Step 4](src//test//java//io//github//javafaktura//s01e05//filter//tdd//step4//WeatherLocationFilterTest.java)        | :closed_book: | Trying to provide minimal implementation to pass second test and it pass, but we introduce regression to first test. |
-| [Step 5](src//test//java//io//github//javafaktura//s01e05//filter//tdd//step5//WeatherLocationFilterTest.java)        | :green_book: :blue_book:| Refactoring WeatherCriteria so both tests pass      |
+| [Step 5](src//test//java//io//github//javafaktura//s01e05//filter//tdd//step5//WeatherLocationFilterTest.java)        | :green_book: :arrow_down: :blue_book:| Refactoring WeatherCriteria so both tests pass      |
 | [Step 6](src//test//java//io//github//javafaktura//s01e05//filter//tdd//step6//WeatherLocationFilterTest.java)        | :closed_book: | Third test introduced, now we expect to return only weather withing defined temp range |
 | [Step 7](src//test//java//io//github//javafaktura//s01e05//filter//tdd//step7//WeatherLocationFilterTest.java)        | :green_book: | Implementation to pass this one is very similar to earlier. All tests passes!|
 | [Step 8](src//test//java//io//github//javafaktura//s01e05//filter//tdd//step8//WeatherLocationFilterTest.java)        | :closed_book: | 4th test introduced, this time we implement rain conditions and define test covering this new requirement|
 | [Step 9](src//test//java//io//github//javafaktura//s01e05//filter//tdd//step9//WeatherLocationFilterTest.java)        | :green_book: | Minimal implementation to pass 4th test introduced|
 | [Step 10](src//test//java//io//github//javafaktura//s01e05//filter//tdd//step10//WeatherLocationFilterTest.java)        | :closed_book: | Kite requirements seems to be a little bit more complicated, so we decide to define parametrized test covering all edge cases. 5 new tests which currently fails providen. |
-| [Step 11](src//test//java//io//github//javafaktura//s01e05//filter//tdd//step11//WeatherLocationFilterTest.java)        | :closed_book: | Providing required implementation to pass kite tests and then starting refactoring whole filter module. Using DDD approach and moving Predicate objects to Criteria|
+| [Step 11](src//test//java//io//github//javafaktura//s01e05//filter//tdd//step11//WeatherLocationFilterTest.java)        | :green_book: :arrow_down: :blue_book: | Providing required implementation to pass kite tests and then starting refactoring whole filter module. Using DDD approach and moving Predicate objects to Criteria|
 
 :closed_book: - fail
 :green_book: - pass

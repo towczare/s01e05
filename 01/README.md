@@ -20,4 +20,4 @@ Smells (sometimes opinionated):
 Good practices (sometimes opinionated):
 * :+1: better test naming, both method naming and descriptive one
 * :+1: using [literals](https://en.wikipedia.org/wiki/Literal_(computer_programming))
-* :+1: given / when / convention - introduced
+* :+1: given / when / then - convention introduced
