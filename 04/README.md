@@ -2,9 +2,9 @@
 
 ![src//main//resources//images//beaufort.png](src//main//resources//images//beaufort.png)
 
-# Anemic class approach
+## Anemic class approach
 
-## Classes
+### Classes
 
 Anemic classes contains nothing more than just data.
 All business logic is stored in separate classes `Services`, `Converters`, `Utils` you call it.
@@ -13,7 +13,7 @@ All business logic is stored in separate classes `Services`, `Converters`, `Util
 * [KnotsToBeaufortScaleConverter](src//main//java//io//github//javafaktura//s01e05//anemic//KnotsToBeaufortScaleConverter.java) - logic converting [knot units](https://en.wikipedia.org/wiki/Knot_(unit)) to [Beaufort scale](https://en.wikipedia.org/wiki/Beaufort_scale)
 * [WaveHeightToBeaufortScaleConverter](src//main//java//io//github//javafaktura//s01e05//anemic//WaveHeightToBeaufortScaleConverter.java) - logic converting wave height to [Beaufort scale](https://en.wikipedia.org/wiki/Beaufort_scale)
 
-## Tests
+### Tests
 
 * [KnotsToBeaufortScaleConverterTest](src//test//java//io//github//javafaktura//s01e05//anemic//KnotsToBeaufortScaleConverterTest.java) - tests covering [knot units](https://en.wikipedia.org/wiki/Knot_(unit)) converter logic
 * [WaveHeightToBeaufortScaleConverterTest](src//test//java//io//github//javafaktura//s01e05//anemic//WaveHeightToBeaufortScaleConverterTest.java) - tests covering wave converter logic
