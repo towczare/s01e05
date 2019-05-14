@@ -42,7 +42,7 @@ Domain classes contains both data and business logic.
 ### Tests
 
 * [BeaufortScaleFromKnotsTest](src//test//java//io//github//javafaktura//s01e05//domain//BeaufortScaleFromKnotsTest.java) - testing conversion from knot units to Beaufort scale
-* [BeaufortScaleFromWaveHeightInFootsTest](src//test//java//io//github//javafaktura//s01e05//domain//BeaufortScaleFromWaveHeightInFootsTest.java) - testing conversion from wave height defined in foot units to Beaufort scale
+* [BeaufortScaleFromWaveHeightInFootTest](src//test//java//io//github//javafaktura//s01e05//domain//BeaufortScaleFromWaveHeightInFootTest.java) - testing conversion from wave height defined in foot units to Beaufort scale
 * [BeaufortScaleWaveHeightInMetersTest](src//test//java//io//github//javafaktura//s01e05//domain//BeaufortScaleWaveHeightInMetersTest.java) - testing conversion from wave height defined in meter units to Beaufort scale
 * [FootTest](src//test//java//io//github//javafaktura//s01e05//domain//FootTest.java) - testing foot unit class methods
 * [MeterTest](src//test//java//io//github//javafaktura//s01e05//domain//MeterTest.java) - testing meter unit class methods
